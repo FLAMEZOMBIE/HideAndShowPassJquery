@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cara show hide form password dengan jQuery</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <center>
+            <h1>Cara show hide form password dengan jQuery</h1>
+        </center>
+        <div class="form-inline col-sm-6 mx-auto mt-5">
+            <label for="pass">Password</label>
+            <input type="password" name="password" id="password" class="form-control ml-2 mr-2">
+            <input type="checkbox" id="show-password"> Tampilkan Password
+        </div>
+    </div>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#show-password').click(function() {
+                if ($(this).is(':checked')) {
+                    $('#password').attr('type', 'text');
+                } else {
+                    $('#password').attr('type', 'password');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
